@@ -1,12 +1,23 @@
 .darkmode {
-  position: relative;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
   width: 20px;
   height: 20px;
-  margin: 0 10px;
+  margin: 0;
 
   & > .toggle {
     display: none;
     box-sizing: border-box;
+  }
+
+  & > .darkmode-button {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
   }
 
   & svg {
@@ -15,9 +26,14 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: calc(50% - 10px);
+    top: 0;
+    left: 0;
     fill: var(--darkgray);
-    transition: opacity 0.1s ease;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      fill: var(--secondary);
+    }
   }
 }
 

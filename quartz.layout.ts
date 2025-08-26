@@ -5,19 +5,19 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  footer: Component.Darkmode(),
+  footer: Component.EmptyFooter(),
 }
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [],
   left: [],
-  right: [],
+  right: [Component.Darkmode()],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [],
   left: [],
-  right: [],
+  right: [Component.Darkmode()],
 }

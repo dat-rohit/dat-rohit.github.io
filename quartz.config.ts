@@ -3,13 +3,13 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "spike",
+    pageTitle: "Rohit",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "spikedoanz.github.io",
+    baseUrl: "rohitdat.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
@@ -29,15 +29,15 @@ const config: QuartzConfig = {
         //   tertiary: "#9ca0b0",  // cursor highlight
         //   highlight: "rgba(0, 0, 0, 0)",
         // },
-        darkMode: { // catpuccin mocha
-          light: "#11111b",
-          lightgray: "#6c7086",
-          gray: "#1e1e2e",
-          darkgray: "#b1b1b1",
-          dark: "#cdd6f4",
-          secondary: "#f38ba8",
-          tertiary: "#45475a",
-          highlight: "rgba(0, 0, 0, 0)",
+        darkMode: { // deep ocean theme
+          light: "#0f1419",      // dark navy background
+          lightgray: "#1f2937",  // slightly lighter navy for borders
+          gray: "#374151",       // mid-tone navy for subtle elements
+          darkgray: "#e6fffa",   // light cyan for main text
+          dark: "#ffffff",       // pure white for emphasis text
+          secondary: "#64ffda",  // cyan accents for links
+          tertiary: "#4fd1c7",   // muted cyan for hover states
+          highlight: "rgba(100, 255, 218, 0.1)", // subtle cyan highlight
         },
         lightMode: { // rosepine dawn 
           light: "#faf4ed",

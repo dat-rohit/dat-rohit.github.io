@@ -2,7 +2,7 @@
 title: Building for DeepMind's Hackathon Pt.0
 ---
 
-### [rohitdat dot com](.)
+### [dat-rohit dot com](.)
 
 # Building for DeepMind's Hackathon Pt.0
 

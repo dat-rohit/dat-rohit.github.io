@@ -2,7 +2,7 @@
 title: All News
 ---
 
-### [rohitdat dot com](.) :: news
+### [dat-rohit dot com](.) :: news
 
 All my news and updates, chronologically:
 

@@ -2,7 +2,7 @@
 title: All News
 ---
 
-### [[index|rohitdat dot com]] :: news
+### [rohitdat dot com](.) :: news
 
 All my news and updates, chronologically:
 
@@ -16,4 +16,4 @@ All my news and updates, chronologically:
 
 ---
 
-← [[index|Back to home]]
+← [Back to home](.)

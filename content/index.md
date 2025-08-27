@@ -2,9 +2,9 @@
 title: Rohit
 ---
 
-### [[index|rohitdat dot com]]
+### [rohitdat dot com](.)
 
-Hey there! I'm [[index|Rohit]] -- a ML eng/researcher curious about the intersection of AI and healthcare.
+Hey there! I'm [Rohit](.) -- a ML eng/researcher curious about the intersection of AI and healthcare.
 
 
 Freshly graduated from two MSc at Seoul National University and Télécom SudParis, my research interests are foundation models, reinforcement learning and neuropathologies. Feel free to reach out if you'd like to connect! You can find me on [Twitter](https://x.com/its_rohitos), [LinkedIn](https://www.linkedin.com/in/rohitkumar-datchanamourty/), or email me at rdatchane[dot]19[at]gmail[dot]com. 
@@ -12,9 +12,9 @@ Freshly graduated from two MSc at Seoul National University and Télécom SudPar
 
 #### posts 
 
-2025-08-25 :: [[deepmind-hackathon-pt0|Building for DeepMind's Hackathon Pt.0]]
+2025-08-25 :: [Building for DeepMind's Hackathon Pt.0](deepmind-hackathon-pt0)
 
-[[posts|View All Posts →]]
+[View All Posts →](posts)
 
 #### news
 
@@ -24,7 +24,7 @@ Freshly graduated from two MSc at Seoul National University and Télécom SudPar
 
 2024-08-01 :: Joined AIRS Medical in Seoul as a research scientist intern
 
-[[news|View All News →]]
+[View All News →](news)
 
 
 #### links

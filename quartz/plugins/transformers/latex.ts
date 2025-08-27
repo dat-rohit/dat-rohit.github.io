@@ -1,6 +1,6 @@
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
-import rehypeMathjax from "rehype-mathjax/svg.js"
+// import rehypeMathjax from "rehype-mathjax/svg.js" // Temporarily disabled for Node.js compatibility
 import { QuartzTransformerPlugin } from "../types"
 
 interface Options {
@@ -18,7 +18,8 @@ export const Latex: QuartzTransformerPlugin<Options> = (opts?: Options) => {
       if (engine === "katex") {
         return [[rehypeKatex, { output: "html" }]]
       } else {
-        return [rehypeMathjax]
+        // return [rehypeMathjax] // Temporarily disabled for Node.js compatibility
+        return []
       }
     },
     externalResources() {

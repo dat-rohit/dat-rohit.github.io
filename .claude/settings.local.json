@@ -10,7 +10,9 @@
       "Bash(timeout:*)",
       "Bash(rd:*)",
       "Bash(rm:*)",
-      "Bash(ipconfig)"
+      "Bash(ipconfig)",
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)"
     ],
     "deny": [],
     "ask": [],

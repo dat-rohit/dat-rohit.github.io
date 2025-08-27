@@ -33,7 +33,7 @@ Freshly graduated from two MSc at Seoul National University and Télécom SudPar
 [twitter](https://x.com/its_rohitos) :: 
 [linkedin](https://www.linkedin.com/in/rohitkumar-datchanamourty/) ::
 [email](mailto:rdatchane.19@gmail.com) :: 
-**[resume](cv_datchanamourty_r.pdf)** 📄
+**[resume](static/cv_datchanamourty_r.pdf)** 📄
 
 
 

@@ -5,12 +5,18 @@
       "Bash(npm install)",
       "Bash(npx serve:*)",
       "Bash(ren:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(npx quartz:*)",
+      "Bash(timeout:*)",
+      "Bash(rd:*)",
+      "Bash(rm:*)",
+      "Bash(ipconfig)"
     ],
     "deny": [],
     "ask": [],
     "additionalDirectories": [
-      "C:\\Users\\datchanamourty\\Documents\\TSP\\projects"
+      "C:\\Users\\datchanamourty\\Documents\\TSP\\projects",
+      "C:\\"
     ]
   }
 }

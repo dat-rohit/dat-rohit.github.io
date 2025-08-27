@@ -11,7 +11,9 @@ Freshly graduated from two MSc at Seoul National University and Télécom SudPar
 
 #### posts 
 
-2025-08-25 :: [[test-is-working|Test is working]]
+2025-08-25 :: [[deepmind-hackathon-pt0|Building for DeepMind's Hackathon Pt.0]]
+
+[[posts|View All Posts →]]
 
 #### news
 
@@ -21,7 +23,7 @@ Freshly graduated from two MSc at Seoul National University and Télécom SudPar
 
 2024-08-01 :: Joined AIRS Medical in Seoul as a research scientist intern
 
-2023-09-01 :: Started MSc in Electrical and Computer Engineering at Seoul National University and joined LIST lab as a graduate researcher
+[[news|View All News →]]
 
 
 #### links

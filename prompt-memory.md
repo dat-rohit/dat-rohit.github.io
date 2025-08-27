@@ -444,3 +444,135 @@ export default (() => EmptyFooter) satisfies QuartzComponentConstructor
 **Footer:** ✅ Clean (no debug output)  
 **GitHub Pages Tutorial:** ✅ Complete guide provided  
 **Ready for Production:** ✅ Yes
+
+---
+
+## GitHub Pages Deployment & Content Fixes Session - August 27, 2025
+
+### Session Overview
+**Session Date:** August 27, 2025  
+**Duration:** ~1 hour  
+**Objective:** Fix GitHub Pages deployment issues and content formatting problems  
+**Repository:** https://github.com/dat-rohit/dat-rohit.github.io  
+**Technology:** Quartz 4.1.0 with GitHub Actions deployment
+
+### Issues Identified & Resolved
+
+#### 1. GitHub Pages Deployment Sync Problem
+**Problem:** 
+- Local content included new DeepMind hackathon post
+- Live site (dat-rohit.github.io) showed outdated content
+- Deployment workflow was working but content wasn't syncing
+
+**Root Causes:**
+- Node.js version mismatch: workflow using v18.20.8, repo expecting v22
+- Remote URL mismatch: local repo pointed to `rohitdat.github.io` vs actual `dat-rohit.github.io`
+- Deployment workflow getting stuck in "deployment_queued" state
+
+**Solutions Implemented:**
+- Updated `.github/workflows/deploy.yml` Node.js version from `18.20.8` to `22`
+- Fixed remote URL: `git remote set-url origin https://github.com/dat-rohit/dat-rohit.github.io.git`
+- Set `cancel-in-progress: true` in workflow to prevent queue loops
+- Force refresh deployment with empty commits to trigger pipeline
+
+#### 2. Wiki-Style Link Formatting Issues
+**Problem:** 
+- Links displayed as raw text: `[[index|rohitdat dot com]]` instead of clickable links
+- Navigation broken: `[[posts|View All Posts →]]` showing brackets instead of working links
+- Quartz markdown processor not handling Obsidian-style double-bracket links
+
+**Files Fixed:**
+- `content/index.md`
+- `content/posts.md` 
+- `content/news.md`
+- `content/deepmind-hackathon-pt0.md`
+
+**Link Format Conversions:**
+```markdown
+# Before (broken)
+[[index|rohitdat dot com]]
+[[posts|View All Posts →]]
+[[deepmind-hackathon-pt0|Building for DeepMind's Hackathon Pt.0]]
+
+# After (working)
+[rohitdat dot com](.)
+[View All Posts →](posts)
+[Building for DeepMind's Hackathon Pt.0](deepmind-hackathon-pt0)
+```
+
+#### 3. Site Branding Consistency Update
+**Context:** Unable to change GitHub Pages URL from `dat-rohit.github.io` to `rohitdat.github.io`
+- GitHub Pages URL must match exact username
+- Only way to change would be changing GitHub username itself
+- Custom domain is alternative option for future
+
+**Solution:** Updated all site headers for consistency
+- Changed all titles from `rohitdat dot com` to `dat-rohit dot com`
+- Maintains brand alignment with actual GitHub Pages URL
+
+### Content Structure Updates
+
+#### Current Active Content
+```markdown
+content/
+├── index.md                    # Homepage (dat-rohit dot com branding)
+├── posts.md                   # Posts listing page  
+├── news.md                    # News/updates page
+└── deepmind-hackathon-pt0.md  # DeepMind hackathon blog post
+```
+
+#### Test Post Workflow Verification
+- Created temporary `test-post.md` for deployment testing
+- Verified automatic content discovery and deployment
+- Confirmed post linking in index and posts pages
+- Successfully deleted test content after validation
+
+### Technical Implementation Details
+
+#### GitHub Actions Workflow Fix
+**File:** `.github/workflows/deploy.yml`
+```yaml
+# Key changes made:
+- name: Setup Node.js
+  uses: actions/setup-node@v4
+  with:
+    node-version: 22  # Updated from 18.20.8
+    cache: 'npm'
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true  # Updated from false
+```
+
+#### Repository Configuration
+```bash
+# Fixed remote URL
+git remote set-url origin https://github.com/dat-rohit/dat-rohit.github.io.git
+
+# Verified correct tracking
+origin https://github.com/dat-rohit/dat-rohit.github.io.git (fetch)
+origin https://github.com/dat-rohit/dat-rohit.github.io.git (push)
+```
+
+### Deployment Verification
+- ✅ New post accessible: https://dat-rohit.github.io/deepmind-hackathon-pt0
+- ✅ All navigation links working properly
+- ✅ Site branding consistent across all pages
+- ✅ GitHub Actions workflow completing successfully
+- ✅ No more "deployment_queued" loops
+
+### Quality Assurance Results
+- ✅ All markdown links properly formatted and clickable
+- ✅ Site headers consistent with GitHub Pages URL
+- ✅ Navigation between pages working smoothly  
+- ✅ New content deployment workflow verified
+- ✅ No broken links or display issues
+- ✅ Mobile responsive design maintained
+
+### Session Completion Status
+**Tasks Completed:** 7/7  
+**Build Status:** ✅ Success  
+**Deployment Status:** ✅ Live and synced  
+**Link Formatting:** ✅ All fixed  
+**Site Branding:** ✅ Consistent  
+**Ready for Regular Content Updates:** ✅ Yes

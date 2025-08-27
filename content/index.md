@@ -12,8 +12,6 @@ Freshly graduated from two MSc at Seoul National University and Télécom SudPar
 
 #### posts 
 
-2025-08-27 :: [Testing New Post Deployment](test-post)
-
 2025-08-25 :: [Building for DeepMind's Hackathon Pt.0](deepmind-hackathon-pt0)
 
 [View All Posts →](posts)

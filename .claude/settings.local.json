@@ -15,7 +15,9 @@
       "Bash(npm uninstall:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git log:*)",
+      "Bash(gh repo view:*)"
     ],
     "deny": [],
     "ask": [],

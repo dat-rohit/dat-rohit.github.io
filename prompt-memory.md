@@ -576,3 +576,111 @@ origin https://github.com/dat-rohit/dat-rohit.github.io.git (push)
 **Link Formatting:** ✅ All fixed  
 **Site Branding:** ✅ Consistent  
 **Ready for Regular Content Updates:** ✅ Yes
+
+---
+
+## CV Download Feature Addition - August 27, 2025 (Follow-up)
+
+### Session Overview
+**Session Date:** August 27, 2025 (continued)  
+**Duration:** ~15 minutes  
+**Objective:** Add CV download functionality to the website  
+**User Request:** Add downloadable CV with "get my resume" link in links section
+
+### Implementation Details
+
+#### 1. CV File Management
+**File:** `cv_datchanamourty_r.pdf`
+- **Initial Location:** Root directory (`/cv_datchanamourty_r.pdf`)
+- **Attempted Location:** `/static/cv_datchanamourty_r.pdf` (incorrect for Quartz)
+- **Final Location:** `/quartz/static/cv_datchanamourty_r.pdf` (correct for Quartz build system)
+
+#### 2. Quartz Static Assets Discovery
+**Issue Identified:** Quartz's static file handling
+- Quartz looks for static files in `quartz/static/` directory, not root `static/`
+- Files in `quartz/static/` get copied to `public/static/` during build
+- This matches the pattern of existing assets (icons)
+
+#### 3. Homepage Integration
+**File Modified:** `content/index.md`
+**Link Addition:** Added to links section
+```markdown
+#### links
+[github](https://github.com/dat-rohit) :: 
+[twitter](https://x.com/its_rohitos) :: 
+[linkedin](https://www.linkedin.com/in/rohitkumar-datchanamourty/) ::
+[email](mailto:rdatchane.19@gmail.com) :: 
+**[resume](static/cv_datchanamourty_r.pdf)** 📄
+```
+
+**Styling Choices:**
+- **Bold formatting** to distinguish from other links
+- **📄 Document emoji** for visual context
+- **"resume"** label (professional and concise)
+- Follows existing link pattern with `::`
+
+#### 4. Path Correction Issue & Resolution
+**Initial Problem:** 
+- Link created as `[resume](cv_datchanamourty_r.pdf)`
+- Generated URL: `https://dat-rohit.github.io/cv_datchanamourty_r.pdf` (404)
+- Actual file location: `https://dat-rohit.github.io/static/cv_datchanamourty_r.pdf` (working)
+
+**Root Cause:** Missing `/static/` path prefix in markdown link
+
+**Solution:** 
+- Updated link to `[resume](static/cv_datchanamourty_r.pdf)`
+- Now correctly points to deployed static asset location
+
+#### 5. Build Process Verification
+**Build Commands:**
+```bash
+npx quartz build  # Builds site and copies static assets
+# Output: 16 files emitted (including CV)
+```
+
+**File Structure Post-Build:**
+```
+public/
+├── static/
+│   ├── cv_datchanamourty_r.pdf  # ✅ CV correctly copied
+│   ├── contentIndex.json
+│   └── icons...
+└── [other build files...]
+```
+
+### Technical Implementation Summary
+
+#### Files Modified:
+1. **`quartz/static/cv_datchanamourty_r.pdf`** - CV file (added)
+2. **`content/index.md`** - Homepage links section (modified)
+
+#### Git Commits:
+1. **Initial implementation:** `feat: add CV download functionality`
+2. **Path fix:** `fix: correct CV download link path`
+
+#### Deployment Results:
+- ✅ CV file accessible at: `https://dat-rohit.github.io/static/cv_datchanamourty_r.pdf`
+- ✅ Download link working on homepage
+- ✅ Professional presentation with document emoji
+- ✅ Mobile-responsive (inherits from existing design)
+
+### User Experience Outcome
+**Professional CV Access:**
+- Clean, integrated download option in social links section
+- Direct PDF download (no preview step required)
+- Consistent with site's minimal, professional aesthetic
+- Easy to update (replace file in `quartz/static/` and rebuild)
+
+### Maintenance Notes
+**For Future CV Updates:**
+1. Replace file: `quartz/static/cv_datchanamourty_r.pdf`
+2. Run: `npx quartz build`
+3. Commit and push changes
+4. New CV automatically deployed with next site update
+
+### Session Completion Status
+**Additional Tasks Completed:** 2/2  
+**CV Download Status:** ✅ Live and functional  
+**Path Resolution:** ✅ Fixed  
+**Build Process:** ✅ Verified  
+**Ready for Professional Use:** ✅ Yes

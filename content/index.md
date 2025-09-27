@@ -18,11 +18,13 @@ Freshly graduated from two MSc at Seoul National University and Télécom SudPar
 
 #### news
 
+2025-09-22 :: Joined Raidium as a Machine Learning Engineer
+
 2025-08-28 :: Graduated from Seoul National University & Télécom SudParis
 
 2025-07-05 :: Awarded Jury's honorable mention at Google DeepMind's "Solve for Healthcare and Life Sciences with Gemma" hackathon
 
-2024-08-01 :: Joined AIRS Medical in Seoul as a research scientist intern
+2024-08-01 :: Joined AIRS Medical in Seoul as a Research Scientist Intern
 
 [View All News →](news)
 
